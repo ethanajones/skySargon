@@ -14,11 +14,17 @@ const NameScreen = () => {
 }
 
 const NotSargon = ({name}) => {
+    let dietyText = "";
+    if (name === "Sargon") {
+        dietyText = 'Welcome Home.'
+    } else {
+        dietyText = "Oh sorry, you're not the person I'm looking for.";
+    }
 
     return (
         <>
-            {name ? <h2>So you say your name is {name}? </h2> : null}
-            {name !== "Sargon" ? <h3>Oh sorry, you're not the person I'm looking for.</h3> : <h3>Welcome Home.</h3>}
+            {name ? <h2>You say your name is {name}? </h2> : null}
+            {name ? <h3>{dietyText}</h3> : null}
         </>)
 }
 
