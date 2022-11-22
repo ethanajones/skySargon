@@ -7,9 +7,9 @@ const NameScreen = () => {
     }
 
     return (
-        <div className="font-bold namescreen">
+        <div>
             <h1>What is your name?</h1>
-            <input type="text" value={name} onChange={handleChange} placeholder="enter name" className="bg-gray-200 rounded text-center"/>
+            <input type="text" value={name} onChange={handleChange} placeholder="enter name" />
             <NotSargon name={name}/>
         </div>
     )
