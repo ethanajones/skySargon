@@ -6,11 +6,13 @@ const NameScreen = () => {
         setName(e.target.value);
     }
 
-    return (<>
-        <h1>What is your name?</h1>
-        <input type="text" value={name} onChange={handleChange}/>
-        <NotSargon name={name}/>
-    </>)
+    return (
+        <div className="font-bold namescreen">
+            <h1>What is your name?</h1>
+            <input type="text" value={name} onChange={handleChange} placeholder="enter name" className="bg-gray-200 rounded text-center"/>
+            <NotSargon name={name}/>
+        </div>
+    )
 }
 
 const NotSargon = ({name}) => {
